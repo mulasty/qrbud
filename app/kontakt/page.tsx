@@ -25,7 +25,7 @@ const contactDetails = [
       </svg>
     ),
     label: "Telefon",
-    value: "+48 123 456 789",
+    value: "+48 784 775 728",
     href: "tel:+48123456789",
   },
   {
@@ -35,8 +35,8 @@ const contactDetails = [
       </svg>
     ),
     label: "Email",
-    value: "kontakt@qrbud.pl",
-    href: "mailto:kontakt@qrbud.pl",
+     value: "qrtchorzewski@gmail.com",
+      href: "mailto:qrtchorzewski@gmail.com",
   },
 ];
 

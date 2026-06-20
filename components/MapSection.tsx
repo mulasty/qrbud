@@ -76,7 +76,7 @@ export default function MapSection() {
                   href="tel:+48123456789"
                   className="hover:text-primary transition-colors"
                 >
-                  +48 123 456 789
+                  +48 784 775 728
                 </a>
               </p>
             </div>
@@ -84,10 +84,10 @@ export default function MapSection() {
               <h4 className="font-bold text-secondary">Email</h4>
               <p className="text-text-muted text-sm mt-1">
                 <a
-                  href="mailto:kontakt@qrbud.pl"
+                  href="mailto:qrtchorzewski@gmail.com"
                   className="hover:text-primary transition-colors"
                 >
-                  kontakt@qrbud.pl
+                  qrtchorzewski@gmail.com
                 </a>
               </p>
             </div>

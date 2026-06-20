@@ -48,15 +48,15 @@ export default function Footer() {
                   href="tel:+48123456789"
                   className="hover:text-primary transition-colors"
                 >
-                  +48 123 456 789
+                  +48 784 775 728
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:kontakt@qrbud.pl"
+                  href="mailto:qrtchorzewski@gmail.com"
                   className="hover:text-primary transition-colors"
                 >
-                  kontakt@qrbud.pl
+                  qrtchorzewski@gmail.com
                 </a>
               </li>
             </ul>

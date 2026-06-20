@@ -6,8 +6,8 @@ export default function SchemaOrg() {
     description:
       "Firma budowlana specjalizująca się w budowie domów jednorodzinnych, remontach i wykończeniach wnętrz na terenie Łomży i województwa podlaskiego.",
     url: "https://qrbud.pl",
-    telephone: "+48 123 456 789",
-    email: "kontakt@qrbud.pl",
+    telephone: "+48 784 775 728",
+    email: "qrtchorzewski@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Fryderyka Chopina 3/32",
