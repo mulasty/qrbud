@@ -6,8 +6,9 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/", label: "Strona Główna" },
+  { href: "/oferta", label: "Oferta" },
   { href: "/#uslugi", label: "Usługi" },
-  { href: "/#onas", label: "O Nas" },
+  { href: "/#realizacje", label: "Realizacje" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
