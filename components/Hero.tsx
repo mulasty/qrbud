@@ -94,18 +94,20 @@ export default function Hero() {
                 backgroundImage: "linear-gradient(135deg, #F5F5F0 0%, #C9A96E 100%)",
               }}
             >
-              Budujemy{" "}
+              Budujemy domy.
             </span>
-            <span className="text-[#F5F5F0]">domy</span>
             <br />
-            <span className="text-[#F5F5F0]">z pasją i{" "}</span>
             <span
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage: "linear-gradient(135deg, #F5F5F0 0%, #C9A96E 100%)",
               }}
             >
-              precyzją
+              Remontujemy wnętrza.
+            </span>
+            <br />
+            <span className="text-[#F5F5F0]">
+              Z pasją i precyzją.
             </span>
           </h1>
 
@@ -113,9 +115,9 @@ export default function Hero() {
             className="text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
             style={{ color: "#A0A0B0" }}
           >
-            Kompleksowe usługi budowlane &mdash; od fundamentów po dach.
-            Działamy na terenie Łomży i województwa podlaskiego. Ponad 4 lata
-            doświadczenia w budowie domów jednorodzinnych.
+            Kompleksowe usługi budowlane w Łomży i województwie podlaskim.
+            Od fundamentów po dach, od łazienki po elewację.
+            Darmowa wycena w 24h.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
