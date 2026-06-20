@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://qrbud.pl/sitemap.xml

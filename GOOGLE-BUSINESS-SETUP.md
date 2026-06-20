@@ -36,7 +36,7 @@ Polska
 
 ### 6. Strona internetowa
 ```
-https://qrbud.vercel.app
+https://qrbud.pl
 ```
 (lub własna domena jeśli już kupiona)
 
@@ -263,7 +263,7 @@ Po utworzeniu wizytówki przejdź do zakładki "Usługi" i dodaj każdą z poni�
 🏗️ Budowa domu od podstaw
    Realizacja kompletna — od projektu do kluczy. Wycena indywidualna.
    Cena orientacyjna: od 350 000 zł
-   Link: https://qrbud.vercel.app/kontakt
+   Link: https://qrbud.pl/kontakt
 
 🔨 Remont generalny mieszkania
    Kompleksowy remont ze zmianą układu ścian. Wycena w ciągu 24h.

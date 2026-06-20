@@ -2,9 +2,21 @@ import type { Metadata } from "next";
 import KontaktForm from "./KontaktForm";
 
 export const metadata: Metadata = {
-  title: "Kontakt",
+  title: "Kontakt | QR BUD Łomża — Telefon, Adres, Wycena",
   description:
-    "Skontaktuj się z QR BUD Mikołaj Tchórzewski — budowa domów, remonty, wykończenia wnętrz. Łomża, woj. podlaskie. Darmowa wycena.",
+    "QR BUD Mikołaj Tchórzewski — adres: Fryderyka Chopina 3/32, 18-400 Łomża. Tel: +48 784 775 728. NIP: 718-215-34-10. Darmowa wycena budowy domów i remontów.",
+  keywords: [
+    "QR BUD kontakt",
+    "budowa domów Łomża telefon",
+    "remonty Łomża adres",
+    "firma budowlana podlaskie kontakt",
+    "wycena budowlana Łomża",
+  ],
+  openGraph: {
+    title: "Kontakt | QR BUD Łomża",
+    description: "Adres, telefon i formularz kontaktowy QR BUD. Darmowa wycena w 24h.",
+    url: "https://qrbud.pl/kontakt",
+  },
 };
 
 const contactDetails = [
@@ -26,7 +38,7 @@ const contactDetails = [
     ),
     label: "Telefon",
     value: "+48 784 775 728",
-    href: "tel:+48123456789",
+    href: "tel:+48784775728",
   },
   {
     icon: (
@@ -35,8 +47,8 @@ const contactDetails = [
       </svg>
     ),
     label: "Email",
-     value: "qrtchorzewski@gmail.com",
-      href: "mailto:qrtchorzewski@gmail.com",
+    value: "qrtchorzewski@gmail.com",
+    href: "mailto:qrtchorzewski@gmail.com",
   },
 ];
 
@@ -48,58 +60,96 @@ const companyInfo = [
 ];
 
 export default function KontaktPage() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://qrbud.pl/kontakt#contactpage",
+    url: "https://qrbud.pl/kontakt",
+    name: "Kontakt | QR BUD Łomża",
+    mainEntity: {
+      "@type": "LocalBusiness",
+      "@id": "https://qrbud.pl/#business",
+      name: "QR BUD Mikołaj Tchórzewski",
+      telephone: "+48-784-775-728",
+      email: "qrtchorzewski@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Fryderyka Chopina 3/32",
+        postalCode: "18-400",
+        addressLocality: "Łomża",
+        addressRegion: "podlaskie",
+        addressCountry: "PL",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "53.1781",
+        longitude: "22.0596",
+      },
+      openingHours: ["Mo-Fr 07:00-17:00", "Sa 08:00-13:00"],
+      url: "https://qrbud.pl",
+    },
+  };
+
   return (
     <>
-      <section className="bg-secondary py-20 md:py-28 relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
+      <section className="bg-[#12121A] py-20 md:py-28 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 1px 1px, #F47920 1px, transparent 0)",
+              "radial-gradient(circle at 1px 1px, #C9A96E 1px, transparent 0)",
             backgroundSize: "30px 30px",
           }}
         />
         <div className="container-page relative z-10 text-center">
-          <span className="text-primary font-semibold text-sm tracking-widest uppercase">
+          <span className="text-[#C9A96E] font-semibold text-sm tracking-widest uppercase">
             QR BUD
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F5F5F0] mt-3 mb-4">
             Skontaktuj się z nami
           </h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-[#A0A0B0] text-lg max-w-2xl mx-auto">
             Potrzebujesz wyceny lub masz pytania? Zadzwoń lub wypełnij
             formularz &mdash; odpowiemy najszybciej jak to możliwe.
           </p>
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#0A0A0F]">
         <div className="container-page">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <div className="space-y-8">
+            <div className="space-y-8" itemScope itemType="https://schema.org/LocalBusiness" itemID="https://qrbud.pl/#business">
+              <meta itemProp="name" content="QR BUD Mikołaj Tchórzewski" />
+              <meta itemProp="telephone" content="+48-784-775-728" />
+              <meta itemProp="email" content="qrtchorzewski@gmail.com" />
               <div>
-                <h2 className="text-2xl font-bold text-secondary mb-6">
+                <h2 className="text-2xl font-bold text-[#F5F5F0] mb-6">
                   Dane kontaktowe
                 </h2>
                 <div className="space-y-5">
                   {contactDetails.map((item) => (
                     <div key={item.label} className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0">
+                      <div className="w-10 h-10 bg-[rgba(201,169,110,0.1)] text-[#C9A96E] rounded-lg flex items-center justify-center shrink-0">
                         {item.icon}
                       </div>
                       <div>
-                        <div className="text-sm text-text-muted">
+                        <div className="text-sm text-[#A0A0B0]">
                           {item.label}
                         </div>
                         {item.href ? (
                           <a
                             href={item.href}
-                            className="font-medium text-secondary hover:text-primary transition-colors"
+                            className="font-medium text-[#F5F5F0] hover:text-[#C9A96E] transition-colors"
+                            itemProp={item.label === "Adres" ? "address" : item.label === "Telefon" ? "telephone" : "email"}
                           >
                             {item.value}
                           </a>
                         ) : (
-                          <div className="font-medium text-secondary">
+                          <div className="font-medium text-[#F5F5F0]" itemProp={item.label === "Adres" ? "address" : undefined}>
                             {item.value}
                           </div>
                         )}
@@ -109,13 +159,13 @@ export default function KontaktPage() {
                 </div>
               </div>
 
-              <div className="bg-surface rounded-2xl p-6">
-                <h3 className="font-bold text-secondary mb-3">Dane firmy</h3>
+              <div className="bg-[#1A1A25] border border-[rgba(201,169,110,0.15)] rounded-2xl p-6">
+                <h3 className="font-bold text-[#F5F5F0] mb-3">Dane firmy</h3>
                 <dl className="space-y-2 text-sm">
                   {companyInfo.map(([label, value]) => (
                     <div key={label} className="flex justify-between">
-                      <dt className="text-text-muted">{label}</dt>
-                      <dd className="font-medium text-secondary">{value}</dd>
+                      <dt className="text-[#A0A0B0]">{label}</dt>
+                      <dd className="font-medium text-[#F5F5F0]">{value}</dd>
                     </div>
                   ))}
                 </dl>

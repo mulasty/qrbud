@@ -15,7 +15,7 @@ const companyData = [
 
 export default function ONas() {
   return (
-    <section id="onas" className="py-20 md:py-28 bg-white">
+    <section id="onas" className="py-20 md:py-28 bg-[#12121A]">
       <div className="container-page">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -24,13 +24,13 @@ export default function ONas() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-primary font-semibold text-sm tracking-widest uppercase">
+            <span className="text-[#C9A96E] font-semibold text-sm tracking-widest uppercase">
               Poznaj nas
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mt-3 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6 bg-gradient-to-r from-[#F5F5F0] to-[#C9A96E] bg-clip-text text-transparent">
               O firmie QR BUD
             </h2>
-            <div className="space-y-4 text-text-muted leading-relaxed">
+            <div className="space-y-4 text-[#A0A0B0] leading-relaxed">
               <p>
                 QR BUD to firma budowlana założona w 2021 roku przez Mikołaja
                 Tchórzewskiego. Specjalizujemy się w budowie domów
@@ -57,17 +57,17 @@ export default function ONas() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-secondary rounded-2xl p-8 md:p-10"
+            className="bg-[#1A1A25] border border-[rgba(201,169,110,0.15)] rounded-2xl p-8 md:p-10"
           >
-            <h3 className="text-xl font-bold text-white mb-6">Dane firmy</h3>
+            <h3 className="text-xl font-bold text-[#F5F5F0] mb-6">Dane firmy</h3>
             <dl className="space-y-4">
               {companyData.map((item) => (
                 <div
                   key={item.label}
                   className="flex flex-col sm:flex-row sm:justify-between gap-1 border-b border-white/10 pb-3"
                 >
-                  <dt className="text-gray-400 text-sm">{item.label}</dt>
-                  <dd className="text-white font-medium text-sm text-right break-all">
+                  <dt className="text-[#A0A0B0] text-sm">{item.label}</dt>
+                  <dd className="text-[#C9A96E] font-medium text-sm text-right break-all">
                     {item.value}
                   </dd>
                 </div>

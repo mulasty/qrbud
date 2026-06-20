@@ -5,16 +5,21 @@ import Link from "next/link";
 
 export default function KontaktCTA() {
   return (
-    <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+    <section
+      className="py-20 md:py-28 relative overflow-hidden"
+      style={{ backgroundColor: "#12121A", borderRadius: "24px" }}
+    >
+      {/* Subtle gold particles */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, #F47920 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, #C9A96E 1px, transparent 0)",
           backgroundSize: "30px 30px",
         }}
       />
-      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+      {/* Subtle gold glow at top */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-[#C9A96E]/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container-page relative z-10 text-center">
         <motion.div
@@ -24,21 +29,31 @@ export default function KontaktCTA() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mx-auto"
         >
-          <span className="text-primary font-semibold text-sm tracking-widest uppercase">
+          <span
+            className="font-semibold text-sm tracking-widest uppercase"
+            style={{ color: "#C9A96E" }}
+          >
             Skontaktuj się
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-3 mb-4">
-            Gotowy na swój wymarzony dom?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+            <span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage: "linear-gradient(135deg, #F5F5F0 0%, #C9A96E 100%)",
+              }}
+            >
+              Gotowy na swój wymarzony dom?
+            </span>
           </h2>
-          <p className="text-gray-300 text-lg mb-10">
+          <p className="text-lg mb-10" style={{ color: "#A0A0B0" }}>
             Zadzwoń lub napisz &mdash; przygotujemy bezpłatną wycenę dostosowaną
             do Twoich potrzeb.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+48123456789"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25"
+              href="tel:+48784775728"
+              className="inline-flex items-center justify-center gap-2 bg-[#C9A96E] text-[#0A0A0F] px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-[0_0_30px_rgba(201,169,110,0.35)] hover:brightness-110"
             >
               <svg
                 className="w-5 h-5"
@@ -57,7 +72,7 @@ export default function KontaktCTA() {
             </a>
             <Link
               href="/kontakt"
-              className="inline-flex items-center justify-center border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center border border-[#C9A96E]/30 text-[#F5F5F0] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#C9A96E]/10 transition-colors"
             >
               Formularz kontaktowy
             </Link>

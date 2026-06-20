@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -14,15 +14,25 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-      <div className="container-page flex items-center justify-between h-16 md:h-20">
-        <Link
-          href="/"
-          className="flex items-center gap-2"
-        >
-          <img src="/logo-horizontal.svg" alt="QR BUD" className="h-10 md:h-12 w-auto" />
+    <nav
+      className={`sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-[rgba(201,169,110,0.15)] transition-shadow duration-300 ${
+        scrolled ? "shadow-[0_4px_30px_rgba(0,0,0,0.5)]" : ""
+      }`}
+    >
+      <div className="container-page flex items-center justify-between h-20">
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/logo.png" alt="QR BUD" className="h-10 md:h-12 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -30,14 +40,15 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-text-muted hover:text-primary transition-colors"
+              className="group relative text-sm font-medium text-[#A0A0B0] hover:text-[#C9A96E] transition-colors"
             >
               {link.label}
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#C9A96E] transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
           <Link
             href="/kontakt"
-            className="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors"
+            className="bg-[#C9A96E] text-[#0A0A0F] px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#D4B87A] transition-colors"
           >
             Wycena
           </Link>
@@ -45,7 +56,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-secondary"
+          className="md:hidden p-2 text-[#A0A0B0] hover:text-[#C9A96E] transition-colors"
           aria-label="Menu"
         >
           <svg
@@ -71,7 +82,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-gray-100 overflow-hidden"
+            className="md:hidden bg-[#12121A] border-b border-[rgba(201,169,110,0.15)] overflow-hidden"
           >
             <div className="container-page py-4 flex flex-col gap-3">
               {navLinks.map((link) => (
@@ -79,7 +90,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-text-muted hover:text-primary py-2 transition-colors font-medium"
+                  className="text-[#A0A0B0] hover:text-[#C9A96E] py-2 transition-colors font-medium"
                 >
                   {link.label}
                 </Link>
@@ -87,7 +98,7 @@ export default function Navbar() {
               <Link
                 href="/kontakt"
                 onClick={() => setIsOpen(false)}
-                className="bg-primary text-white text-center px-5 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+                className="bg-[#C9A96E] text-[#0A0A0F] text-center px-5 py-3 rounded-lg font-semibold hover:bg-[#D4B87A] transition-colors"
               >
                 Darmowa wycena
               </Link>

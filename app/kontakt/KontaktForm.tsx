@@ -22,11 +22,11 @@ export default function KontaktForm() {
   }
 
   return (
-    <div className="bg-surface rounded-2xl p-8 md:p-10">
-      <h2 className="text-2xl font-bold text-secondary mb-2">
+    <div className="bg-[#1A1A25] border border-[rgba(201,169,110,0.15)] rounded-2xl p-8 md:p-10">
+      <h2 className="text-2xl font-bold text-[#F5F5F0] mb-2">
         Formularz kontaktowy
       </h2>
-      <p className="text-text-muted mb-8">
+      <p className="text-[#A0A0B0] mb-8">
         Wypełnij formularz, a odezwiemy się w ciągu 24 godzin.
       </p>
 
@@ -36,7 +36,7 @@ export default function KontaktForm() {
           animate={{ opacity: 1, scale: 1 }}
           className="text-center py-12"
         >
-          <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[rgba(201,169,110,0.1)] text-[#C9A96E] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
               className="w-8 h-8"
               fill="none"
@@ -51,10 +51,10 @@ export default function KontaktForm() {
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-secondary mb-2">
+          <h3 className="text-xl font-bold text-[#F5F5F0] mb-2">
             Dziękujemy za wiadomość!
           </h3>
-          <p className="text-text-muted">
+          <p className="text-[#A0A0B0]">
             Skontaktujemy się z Tobą najszybciej jak to możliwe.
           </p>
         </motion.div>
@@ -64,7 +64,7 @@ export default function KontaktForm() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-secondary mb-1.5"
+                className="block text-sm font-medium text-[#F5F5F0] mb-1.5"
               >
                 Imię i nazwisko *
               </label>
@@ -72,14 +72,14 @@ export default function KontaktForm() {
                 id="name"
                 type="text"
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                className="w-full px-4 py-3 rounded-lg border border-[rgba(201,169,110,0.2)] bg-[#12121A] text-[#F5F5F0] placeholder:text-[#A0A0B0] focus:outline-none focus:ring-2 focus:ring-[rgba(201,169,110,0.3)] focus:border-[#C9A96E] transition-all"
                 placeholder="Jan Kowalski"
               />
             </div>
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-secondary mb-1.5"
+                className="block text-sm font-medium text-[#F5F5F0] mb-1.5"
               >
                 Telefon *
               </label>
@@ -87,7 +87,7 @@ export default function KontaktForm() {
                 id="phone"
                 type="tel"
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                className="w-full px-4 py-3 rounded-lg border border-[rgba(201,169,110,0.2)] bg-[#12121A] text-[#F5F5F0] placeholder:text-[#A0A0B0] focus:outline-none focus:ring-2 focus:ring-[rgba(201,169,110,0.3)] focus:border-[#C9A96E] transition-all"
                 placeholder="+48 123 456 789"
               />
             </div>
@@ -96,14 +96,14 @@ export default function KontaktForm() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-secondary mb-1.5"
+              className="block text-sm font-medium text-[#F5F5F0] mb-1.5"
             >
               Email
             </label>
             <input
               id="email"
               type="email"
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+              className="w-full px-4 py-3 rounded-lg border border-[rgba(201,169,110,0.2)] bg-[#12121A] text-[#F5F5F0] placeholder:text-[#A0A0B0] focus:outline-none focus:ring-2 focus:ring-[rgba(201,169,110,0.3)] focus:border-[#C9A96E] transition-all"
               placeholder="jan@example.com"
             />
           </div>
@@ -111,7 +111,7 @@ export default function KontaktForm() {
           <div>
             <label
               htmlFor="subject"
-              className="block text-sm font-medium text-secondary mb-1.5"
+              className="block text-sm font-medium text-[#F5F5F0] mb-1.5"
             >
               Temat *
             </label>
@@ -119,7 +119,7 @@ export default function KontaktForm() {
               id="subject"
               required
               defaultValue=""
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+              className="w-full px-4 py-3 rounded-lg border border-[rgba(201,169,110,0.2)] bg-[#12121A] text-[#F5F5F0] focus:outline-none focus:ring-2 focus:ring-[rgba(201,169,110,0.3)] focus:border-[#C9A96E] transition-all"
             >
               <option value="" disabled>
                 Wybierz temat zapytania
@@ -135,7 +135,7 @@ export default function KontaktForm() {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-secondary mb-1.5"
+              className="block text-sm font-medium text-[#F5F5F0] mb-1.5"
             >
               Wiadomość *
             </label>
@@ -143,19 +143,19 @@ export default function KontaktForm() {
               id="message"
               required
               rows={5}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-secondary placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-[rgba(201,169,110,0.2)] bg-[#12121A] text-[#F5F5F0] placeholder:text-[#A0A0B0] focus:outline-none focus:ring-2 focus:ring-[rgba(201,169,110,0.3)] focus:border-[#C9A96E] transition-all resize-none"
               placeholder="Opisz swój projekt lub zapytanie..."
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25"
+            className="w-full bg-[#C9A96E] text-[#0A0A0F] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#b89860] transition-colors shadow-lg shadow-[rgba(201,169,110,0.25)]"
           >
             Wyślij zapytanie
           </button>
 
-          <p className="text-xs text-text-muted text-center">
+          <p className="text-xs text-[#A0A0B0] text-center">
             Wysyłając formularz wyrażasz zgodę na przetwarzanie danych
             osobowych w celu obsługi zapytania.
           </p>

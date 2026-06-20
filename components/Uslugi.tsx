@@ -81,7 +81,7 @@ const itemVariants = {
 
 export default function Uslugi() {
   return (
-    <section id="uslugi" className="py-20 md:py-28 bg-surface">
+    <section id="uslugi" className="py-20 md:py-28 bg-[#0A0A0F]">
       <div className="container-page">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -90,13 +90,13 @@ export default function Uslugi() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-semibold text-sm tracking-widest uppercase">
+          <span className="text-[#C9A96E] font-semibold text-sm tracking-widest uppercase">
             Czym się zajmujemy
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mt-3 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F5F5F0] mt-3 mb-4">
             Nasze usługi
           </h2>
-          <p className="text-text-muted text-lg">
+          <p className="text-[#A0A0B0] text-lg">
             Oferujemy kompleksowe usługi budowlane na terenie Łomży i okolic.
             Każde zlecenie traktujemy indywidualnie, z pełnym zaangażowaniem i
             dbałością o detale.
@@ -114,15 +114,15 @@ export default function Uslugi() {
             <motion.div
               key={service.title}
               variants={itemVariants}
-              className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group"
+              className="bg-[#12121A] p-8 rounded-2xl border border-[rgba(201,169,110,0.15)] hover:border-[#C9A96E]/40 hover:shadow-[0_0_30px_rgba(201,169,110,0.15)] transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <div className="w-14 h-14 bg-[#1A1A25] text-[#C9A96E] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#C9A96E] group-hover:text-[#0A0A0F] transition-all duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-3">
+              <h3 className="text-xl font-bold text-[#F5F5F0] mb-3">
                 {service.title}
               </h3>
-              <p className="text-text-muted leading-relaxed">
+              <p className="text-[#A0A0B0] leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
