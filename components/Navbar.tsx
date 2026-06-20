@@ -20,9 +20,9 @@ export default function Navbar() {
       <div className="container-page flex items-center justify-between h-16 md:h-20">
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-xl text-secondary"
+          className="flex items-center gap-2"
         >
-          <span className="text-primary">QR</span> BUD
+          <img src="/logo-horizontal.svg" alt="QR BUD" className="h-10 md:h-12 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

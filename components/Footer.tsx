@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="container-page py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <Link href="/" className="text-2xl font-bold">
-              <span className="text-primary">QR</span> BUD
+            <Link href="/" className="flex items-center gap-2 mb-2">
+              <img src="/logo-horizontal.svg" alt="QR BUD" className="h-8 w-auto brightness-0 invert" />
             </Link>
             <p className="text-gray-400 mt-4 text-sm leading-relaxed">
               Profesjonalne usługi budowlane &mdash; budowa domów, remonty,
